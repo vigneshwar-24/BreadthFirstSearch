@@ -35,10 +35,15 @@ import random
 import math
 import sys
 from collections import defaultdict, deque, Counter
-from itertools import combinations
-
-Problems
-This is the abstract class. Specific problem domains will subclass this.
+from itertools import combinations\
+# Prepared by 
+# C. Obed Otto, 
+# Department of Artificial Intelligence and Datascience,
+# Saveetha Engineering College. 602105. India.
+# Experiment done by
+# Vigneshwat S,
+# Department of Artificial Intelligence and datascience,
+# Saveetha Engineering College. 602105. India.
 class Problem(object):
     """The abstract class for a formal problem. A new domain subclasses this,
     overriding `actions` and `results`, and perhaps other methods.
@@ -61,9 +66,7 @@ class Problem(object):
     def __str__(self):
         return '{0}({1}, {2})'.format(
             type(self).__name__, self.initial, self.goal)
-Nodes
-This is the Node in the search tree. Helper functions (expand, path_actions, path_states) use this Node class.
-class Node:
+    class Node:
     "A Node in a search tree."
     def __init__(self, state, parent=None, action=None, path_cost=0):
         self.__dict__.update(state=state, parent=parent, action=action, path_cost=path_cost)
@@ -76,7 +79,6 @@ class Node:
         return self.path_cost < other.path_cost
 failure = Node('failure', path_cost=math.inf) # Indicates an algorithm couldn't find a solution.
 cutoff  = Node('cutoff',  path_cost=math.inf) # Indicates iterative deepening search was cut off.
-Helper functions
 def expand(problem, node):
     "Expand a node, generating the children nodes."
     s = node.state
@@ -99,26 +101,24 @@ def path_states(node):
         return []
     return path_states(node.parent) + [node.state]
 FIFOQueue = deque
-Search Algorithm : Breadth First Search
 def breadth_first_search(problem):
     "Search shallowest nodes in the search tree first."
     node = Node(problem.initial)
     if problem.is_goal(problem.initial):
         return node
     # Remove the following comments to initialize the data structure
-    frontier = FIFOQueue([node])
-    reached = {problem.initial}
+    #frontier = FIFOQueue([node])
+    #reached = {problem.initial}
     while frontier:
         node = frontier.pop()
-        for child in expand(problem, node):
-            s = child.state
-            if problem.is_goal(s):
-                return child
-            if s not in reached:
-                reached.add(s)
-                frontier.appendleft(child)
+        #for child in expand(problem, node):
+            #s = child.state
+            #if problem.is_goal(s):
+            #    return child
+            #if s not in reached:
+            #    reached.add(s)
+            #    frontier.appendleft(child)
     return failure
-Route Finding Problems
 class RouteProblem(Problem):
     """A problem to find a route between locations on a `Map`.
     Create a problem with RouteProblem(start, goal, map=Map(...)}).
@@ -140,6 +140,7 @@ class RouteProblem(Problem):
         "Straight-line distance between state and the goal."
         locs = self.map.locations
         return straight_line_distance(locs[node.state], locs[self.goal])
+    
 class Map:
     """A map of places in a 2D world: a graph with vertexes and links between them. 
     In `Map(links, locations)`, `links` can be either [(v1, v2)...] pairs, 
@@ -164,7 +165,6 @@ def multimap(pairs) -> dict:
         result[key].append(val)
     return result
 # Create your own map and define the nodes
-
 saveetha_nearby_locations = Map(
     {('PERUNGALATHUR', 'TAMBARAM'):  3, ('TAMBARAM', 'CHROMRPET'): 7, ('TAMBARAM', 'THANDALAM'): 10,
      ('CHROMRPET', 'MEDAVAKAM'): 10, ('CHROMRPET', 'THORAIPAKKAM'): 12, ('CHROMRPET', 'GUINDY'): 13, 
