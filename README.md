@@ -26,17 +26,11 @@ End of program
 
 ## ROUTE MAP
 #### Own map
-![map](https://user-images.githubusercontent.com/77089276/166116876-06c445ce-48fe-49fb-a6ec-a22ca6653f74.png)
+![Screenshot 2022-05-02 104320](https://user-images.githubusercontent.com/77089276/166187437-7f586f33-bcac-4acb-99ab-d7328c721b58.jpg)
+
 
 ## PROGRAM 
 ```python
-%matplotlib inline
-import matplotlib.pyplot as plt
-import random
-import math
-import sys
-from collections import defaultdict, deque, Counter
-from itertools import combinations\
 # Prepared by 
 # C. Obed Otto, 
 # Department of Artificial Intelligence and Datascience,
@@ -45,6 +39,13 @@ from itertools import combinations\
 # Vigneshwat S,
 # Department of Artificial Intelligence and datascience,
 # Saveetha Engineering College. 602105. India.
+%matplotlib inline
+import matplotlib.pyplot as plt
+import random
+import math
+import sys
+from collections import defaultdict, deque, Counter
+from itertools import combinations\
 class Problem(object):
     """The abstract class for a formal problem. A new domain subclasses this,
     overriding `actions` and `results`, and perhaps other methods.
