@@ -142,7 +142,6 @@ class RouteProblem(Problem):
         "Straight-line distance between state and the goal."
         locs = self.map.locations
         return straight_line_distance(locs[node.state], locs[self.goal])
-    
 class Map:
     """A map of places in a 2D world: a graph with vertexes and links between them. 
     In `Map(links, locations)`, `links` can be either [(v1, v2)...] pairs, 
@@ -158,8 +157,6 @@ class Map:
         self.distances = links
         self.neighbors = multimap(links)
         self.locations = locations or defaultdict(lambda: (0, 0))
-
-        
 def multimap(pairs) -> dict:
     "Given (key, val) pairs, make a dict of {key: [val,...]}."
     result = defaultdict(list)
@@ -206,7 +203,9 @@ print("Total Distance={0} Kilometers".format(goal_state_path.path_cost))
 ## OUTPUT:
 <img src="https://user-images.githubusercontent.com/77089276/166117001-13958983-a9fc-4c3a-a10c-5ce32387c716.png" width="500"> 
 <img src="https://user-images.githubusercontent.com/77089276/166117005-a4f7c8f1-3e2d-42c7-ae51-10858260b768.png" width="500"> 
+
 ## SOLUTION JUSTIFICATION:
 Route follow the minimum distance between locations using breadth-first search.
+
 ## RESULT:
 Thus the program developed for finding route with drawn map and finding its distance covered.
