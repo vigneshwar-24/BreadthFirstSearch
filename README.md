@@ -216,6 +216,32 @@ print("Total Distance={0} Kilometers".format(goal_state_path.path_cost))
 <br>
 
 <br>
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
 
 ## OUTPUT:
 ![out1](https://user-images.githubusercontent.com/77089276/166117001-13958983-a9fc-4c3a-a10c-5ce32387c716.png)
