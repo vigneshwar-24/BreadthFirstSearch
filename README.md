@@ -23,7 +23,7 @@ End of program
 
 ## ROUTE MAP
 #### Own map
-![Screenshot 2022-05-02 104320](https://user-images.githubusercontent.com/77089276/166187437-7f586f33-bcac-4acb-99ab-d7328c721b58.jpg)
+<img src="https://user-images.githubusercontent.com/77089276/166187437-7f586f33-bcac-4acb-99ab-d7328c721b58.jpg" width="600"> 
 
 ## PROGRAM 
 ```python 
