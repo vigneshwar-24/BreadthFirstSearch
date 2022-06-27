@@ -54,8 +54,7 @@ class Problem(object):
     (or give an `is_goal` method) and perhaps other keyword args for the subclass."""
 
     def __init__(self, initial=None, goal=None, **kwds): 
-        self.__dict__.update(initial=initial, goal=goal, **kwds) 
-        
+        self.__dict__.update(initial=initial, goal=goal, **kwds)         
     def actions(self, state):        
         raise NotImplementedError
     def result(self, state, action): 
@@ -63,8 +62,7 @@ class Problem(object):
     def is_goal(self, state):        
         return state == self.goal
     def action_cost(self, s, a, s1): 
-        return 1
-    
+        return 1 
     def __str__(self):
         return '{0}({1}, {2})'.format(
             type(self).__name__, self.initial, self.goal)
@@ -89,13 +87,11 @@ def expand(problem, node):
         cost = node.path_cost + problem.action_cost(s, action, s1)
         yield Node(s1, node, action, cost)
         
-
 def path_actions(node):
     "The sequence of actions to get to this node."
     if node.parent is None:
         return []  
     return path_actions(node.parent) + [node.action]
-
 
 def path_states(node):
     "The sequence of states to get to this node."
