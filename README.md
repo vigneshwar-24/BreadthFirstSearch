@@ -219,7 +219,6 @@ print("Total Distance={0} Kilometers".format(goal_state_path.path_cost))
 <br>
 
 <br>
-
 <br>
 
 <br>
@@ -229,6 +228,44 @@ print("Total Distance={0} Kilometers".format(goal_state_path.path_cost))
 <br>
 
 <br>
+<br>
+
+<br>
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
 <br>
 
 <br>
