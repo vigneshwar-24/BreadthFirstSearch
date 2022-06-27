@@ -1,6 +1,8 @@
-# Breadth First Search
-## AIM
+### EX.NO: 02
+### DATE: 28-04-2022
 
+# <p align="center">Breadth First Search</p>
+## AIM
 To develop an algorithm to find the route from the source to the destination point using breadth-first search.
 
 ## THEORY
@@ -10,26 +12,24 @@ Explain the problem statement
 
 ### STEP 1:
 Identify a location in the google map:
-
 ### STEP 2:
 Select a specific number of nodes with distance
-
 ### STEP 3:
 Import required packages.
-
 ### STEP 4:
 Include each node and its distance separately in the dictionary data structure.
-
 ### STEP 5:
 End of program
-
 
 ## ROUTE MAP
 #### Own map
 ![Screenshot 2022-05-02 104320](https://user-images.githubusercontent.com/77089276/166187437-7f586f33-bcac-4acb-99ab-d7328c721b58.jpg)
 
-
 ## PROGRAM 
+```python 
+DEVELOPED BY: VIGNESHWAR S
+REGISTER NO: 212220230058
+```
 ```python
 # Prepared by 
 # C. Obed Otto, 
@@ -113,13 +113,13 @@ def breadth_first_search(problem):
     #reached = {problem.initial}
     while frontier:
         node = frontier.pop()
-        #for child in expand(problem, node):
-            #s = child.state
-            #if problem.is_goal(s):
-            #    return child
-            #if s not in reached:
-            #    reached.add(s)
-            #    frontier.appendleft(child)
+        for child in expand(problem, node):
+            s = child.state
+            if problem.is_goal(s):
+                return child
+            if s not in reached:
+                reached.add(s)
+                frontier.appendleft(child)
     return failure
 class RouteProblem(Problem):
     """A problem to find a route between locations on a `Map`.
@@ -211,4 +211,3 @@ print("Total Distance={0} Kilometers".format(goal_state_path.path_cost))
 Route follow the minimum distance between locations using breadth-first search.
 ## RESULT:
 Thus the program developed for finding route with drawn map and finding its distance covered.
-
