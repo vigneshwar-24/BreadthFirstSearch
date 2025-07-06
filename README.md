@@ -31,8 +31,6 @@ DEVELOPED BY: VIGNESHWAR S
 REGISTER NO: 212220230058
 ```
 ```python
-# Prepared by 
-# C. Obed Otto, 
 # Department of Artificial Intelligence and Datascience,
 # Saveetha Engineering College. 602105. India.
 # Experiment done by
